@@ -202,7 +202,7 @@
     <!-- JAVASCRIPT LOGIC -->
     <script>
         // --- 1. CONFIGURATION & DATA ---
-        const APP_VERSION = "3.1.0"; 
+        const APP_VERSION = "3.1.1"; 
         const SAVE_KEY = "heroRPG_save_v3"; 
         
         function generateBackground() {
@@ -569,6 +569,12 @@
         }
 
         let currentView = 'missions'; 
+
+        // --- ADDED NAVIGATION FUNCTIONS ---
+        function renderMissions() { currentView = 'missions'; renderView(); }
+        function renderMentor() { currentView = 'mentor'; renderView(); }
+        function renderOrigin() { currentView = 'origin'; renderView(); }
+        function renderProfile() { currentView = 'profile'; renderView(); }
         
         function renderView() {
             document.querySelectorAll('.nav-btn').forEach((btn, idx) => {
